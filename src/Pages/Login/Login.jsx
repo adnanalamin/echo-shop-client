@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
 import { AuthContext } from "../../Provider/AuthProvider";
 import LoginImg from "../../assets/image/Login.jpg";
 import LoginPage from "../../assets/image/LoginP.jpg";
 import { Helmet } from "react-helmet";
 import SocialLogin from "../../Components/SocialLogin/SocialLogin";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -17,7 +17,10 @@ const Login = () => {
     const email = form.email.value;
     const password = form.password.value;
     userSignIn(email, password).then(() => {
-      toast.success("Login Successfull");
+      Swal.fire({
+        title: "LogIn Success",
+        icon: "success"
+      });
       navigate(location?.state || "/");
       form.reset();
     });
