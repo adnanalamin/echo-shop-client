@@ -22,8 +22,8 @@ const Navbar = () => {
           <NavLink to='/'>
             <li className="font-poppins font-semibold text-base mr-4">Home</li>
           </NavLink>
-          <NavLink to='/community'>
-            <li className="font-poppins font-semibold text-base mr-4">Community</li>
+          <NavLink to='/allproduct'>
+            <li className="font-poppins font-semibold text-base mr-4">All Product</li>
           </NavLink>
           <NavLink to='/blog'>
             <li className="font-poppins font-semibold text-base mr-4">Blogs</li>
